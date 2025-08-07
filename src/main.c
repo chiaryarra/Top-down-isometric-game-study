@@ -1,14 +1,17 @@
-#include "../libs/raylib/build/raylib_local/include/raylib.h"
+#include "../includes/my_game.h"
 
-int main(void) {
-    InitWindow(800, 600, "Hello Raylib!");
-    while (!WindowShouldClose()) {
-        BeginDrawing();
-        ClearBackground(RAYWHITE);
-        DrawText("Oi Chiara! Raylib funcionando!", 190, 200, 20, LIGHTGRAY);
-        EndDrawing();
-    }
-    CloseWindow();
-    return 0;
+int	main(void)
+{
+	InitWindow(0, 0, "Chichi game");
+	int screen_height = GetScreenHeight();
+	int	screen_width = GetScreenWidth();
+	while (WindowShouldClose() == FALSE) {
+		BeginDrawing();
+		ClearBackground(MY_PINK);
+		DrawText("Oioi mundo, testando!!", screen_width * 0.2, screen_height * 0.2, 30, BLUE);
+		EndDrawing();
+	}
+	CloseWindow();
+	return 0;
 }
 
